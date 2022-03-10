@@ -1,7 +1,0 @@
-
-E
-java:S3740:"/Provide the parametrized type for this generic.(³ºëÜ
-N	java:S1063"9Replace this use of System.out or System.err by a logger.(ÚõÉˆ
-h	java:S1007"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â·ž½øÿÿÿÿ
-d
-java:S1192'"NDefine a constant instead of duplicating this literal "Marlon Brando" 4 times.(ŠÜÞ™

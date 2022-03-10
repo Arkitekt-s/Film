@@ -1,11 +1,12 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class MovieWithoutActors {
+public class MovieWithoutActors implements Serializable {
     private int number;
     private String title;
     private String genre;
     private int releaseYear;
-    private double rate;
+    private Double rate;
 
     public MovieWithoutActors(int number, String title, String genre, int releaseYear, double rate) {
         this.number = number;
@@ -47,11 +48,11 @@ public class MovieWithoutActors {
         this.releaseYear = releaseYear;
     }
 
-    public double getRate() {
+    public Double getRate() {
         return rate;
     }
 
-    public void setRate(double rate) {
+    public void setRate(Double rate) {
         this.rate = rate;
     }
 
@@ -61,7 +62,7 @@ public class MovieWithoutActors {
                 "number=" + number +
                 ", title='" + title + '\'' +
                 ", genre='" + genre + '\'' +
-                ", releseYear=" + releaseYear +
+                ", releaseYear=" + releaseYear +
                 ", rate=" + rate +
                 '}';
     }
@@ -116,7 +117,7 @@ public class MovieWithoutActors {
         movies.add(actorsListG);
         for (ArrayList<String> element: movies) {
             if (element.contains(input)){
-                System.out.println(input+"is available in our list");
+                System.out.println(input+" is available in our list");
                 int name =element.indexOf(input);
                 System.out.println("movies number "+(name+1));
             }
@@ -144,7 +145,7 @@ public class MovieWithoutActors {
         System.out.println(listOfMovies);
     }
 
-    public static String arraylistMovies(int arraylistMovies) {
+    public static MovieWithoutActors arraylistMovies(int arraylistMovies) {
         ArrayList<ArrayList<String>> movies = new ArrayList<>();
 
         ArrayList<String> listOfMovies = new ArrayList<>();
@@ -192,8 +193,62 @@ public class MovieWithoutActors {
         movies.add(listOfMovies);
         movies.add(moviesYear);
         movies.add(actorsListG);
-        System.out.println(listOfMovies.get(arraylistMovies - 1) + " " + moviesYear.get(arraylistMovies - 1) + " " + "play now");
+        System.out.println(listOfMovies.get(arraylistMovies-1) + " " + moviesYear.get(arraylistMovies - 1));
         return null;
+    }
+    //calculate users input avrage by rate and avrage it
+    public static void avrage(int avrage) {
+        int avrage1 = 0;
+        for (int i = 0; i < avrage; i++) {
+            avrage1 = avrage1 + i;
+        }
+        System.out.println("avrage is " + avrage1 / avrage);
+    }
+
+    public  static int arrayListOfrate(int rate){
+        ArrayList rates = new ArrayList<Double>();
+        rates.add(9.2);
+        rates.add(9.1);
+        rates.add(8);
+        rates.add(7.8);
+        rates.add(6.1);
+        rates.add(4.1);
+        rates.add(9.4);
+        rates.add(7.9);
+        rates.add(6);
+        rates.add(9.7);
+        rates.add(4.7);
+        rates.add(7.7);
+
+        System.out.println(rates.get(rate-1)+" "+"rate accourding to imdb");
+
+
+        return 0;
+    }
+    public  static double updateListOfrate(int rate, double newRate){
+        ArrayList up = new ArrayList<Double>();
+        up.add(9.2);
+        up.add(9.1);
+        up.add(8);
+        up.add(7.8);
+        up.add(6.1);
+        up.add(4.1);
+        up.add(9.4);
+        up.add(7.9);
+        up.add(6);
+        up.add(9.7);
+        up.add(4.7);
+        up.add(7.7);
+
+
+
+        up.set(rate-1,(newRate));
+
+
+        System.out.println("Update rate of movie "+up.get(rate-1));
+
+
+        return 0;
     }
 
 }
